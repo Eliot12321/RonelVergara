@@ -1,0 +1,171 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<link rel="stylesheet" href="style.css">
+<div id="container">
+<iframe id="header" src="header.html" style="width:100%; border:0px;"></iframe>
+<!-- Paltan mo lang ng links yung pictures sa container item 1 hanggang 8, tas pwede ka nang pumunta sa contact-->
+<style>
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 99; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(240, 174, 174); 
+  background-color: rgba(126, 41, 41, 0.9); 
+}
+
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: rgb(110, 44, 196);
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+.container div 
+{
+    width: 250px;
+    height: 500px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.container div:hover
+{
+    cursor: pointer;
+    background-blend-mode: luminosity;
+}
+
+.container #item1
+{
+  background-image: url("https://scontent.fmnl6-1.fna.fbcdn.net/v/t1.15752-9/269953372_1292628727828630_6478478478055816217_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHllyef2IcLVBta0OPyKJ8YlQkUeiRqgvGVCRR6JGqC8QJzfWhfDYbFn7TKqdzbBOzxIV78Ot_3xJl4YG5ni4Nw&_nc_ohc=NjxOJE-iQKwAX_WCiuE&_nc_oc=AQkSBf0hLCBotzeHdu_WQl1UdRIP5Blk4C2LCVYXre9f2blAvZpKpNfvGWJQMio39HbrQK8kaoo6fzFkKydmnWpj&tn=AnUQFHfz6SaU0FB8&_nc_ht=scontent.fmnl6-1.fna&oh=03_AVJKsNrVW5GhZGVNerODejMslxHmA4alq9isn5XubxJAVw&oe=620000F1");
+}
+
+.container #item2 
+{
+    background-image: url("https://scontent.fmnl3-2.fna.fbcdn.net/v/t1.15752-9/172078581_482714659809084_3051385747283441324_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFU0CwuH2bBKpeskDS0PUcjuKPA5Wht8Ii4o8DlaG3wiKi66u6uEzcbSmbhqb41-YBIUXZFjqKK31iOM20XHzkO&_nc_ohc=ScsFG1YbzyEAX9t9S98&tn=AnUQFHfz6SaU0FB8&_nc_ht=scontent.fmnl3-2.fna&oh=03_AVJcqTTTlOXbSs0-AkjD4swMxrJNneEeHLzcSan58cpNcA&oe=61FE6AD8");
+}
+
+.container #item3 
+{
+    background-image: url("https://scontent.fmnl3-2.fna.fbcdn.net/v/t1.15752-9/271533323_220323280192117_7595008051087908977_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeH8CpwMTcLPEnkbXunBn_AjkP7ggr2dwr-Q_uCCvZ3Cv0UWngUAvJZgRChRIku3oq8Kvcl2qLlzTPweGWTJQ2fA&_nc_ohc=yfWK1SHFj54AX8_kmm_&_nc_ht=scontent.fmnl3-2.fna&oh=03_AVItYxvvgq8zRiMNsdoMsQT_5-vH3WtjOgK6Gf9a5jOtoQ&oe=61FC8C0C");
+}
+
+.container #item4 
+{
+    background-image: url("https://scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/271082101_1118173145648940_3560175131111818361_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHtfT08IJ9ZsYfP4dTx1GTQlcmC5FbH7-KVyYLkVsfv4rfZqpUeaqNewURkT6wQnWM065KIQc3KjGtnqkzYiyVG&_nc_ohc=cNaonDFk2KUAX9OXr5o&_nc_ht=scontent.fmnl3-1.fna&oh=03_AVKUyRc69zaoLkKAFoSSA7gRqqjfklCA6k9OxEJu5chKEg&oe=61FE160B");
+}
+
+.container #item5 
+{
+    background-image: url("https://scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/269746144_395780065676964_1064572415807609856_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGamDOL6hGps5zr8WJAJnkOxMhpNfNo_OXEyGk182j85XrgbNw1R2l6Hqn67dNIHj0fd1UZmogBuWzEULehXZ_g&_nc_ohc=uS8djEYUMaMAX_H1fwO&_nc_ht=scontent.fmnl3-1.fna&oh=03_AVK_DXRfpVMai0Ub1jn5bb098L1EugrS5N2aOgCZYTjmdw&oe=61FDF690");
+}
+
+.container #item6
+{
+    background-image: url("https://scontent.fmnl3-2.fna.fbcdn.net/v/t1.15752-9/262731879_900687020836280_3135307502496495351_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeE1Vqc4KboZoqVojQmEwYLUvfqjicfqDuu9-qOJx-oO6-75JEH12LGBD3p9TmLSGY-fxvWw8aEdLUbngfJWpyOk&_nc_ohc=LpA7ubWQ6DoAX9-d_go&_nc_ht=scontent.fmnl3-2.fna&oh=03_AVKWanoM0b3SIsDiSMmhityg-VoEk8OzJ0b9ca3FarZFtA&oe=61FC6E92");
+}
+
+.container #item7
+{
+    background-image: url("https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-6/270533417_4654823107939431_6033462620858203016_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=e3f864&_nc_eui2=AeHqR7JdtfgaHrJ67DOWjk8lHwMOWtXpuHEfAw5a1em4ccMA4aqA5n8GOEmUMSr3O0e14ZuLDWtfQPJl-avNeQUG&_nc_ohc=PNrbsxx1-yUAX9G2bo3&_nc_ht=scontent.fmnl3-3.fna&oh=00_AT_jlvy4gScGMJ6Rk529j1VIFWV6uuYOcT5a39FTBJNMHg&oe=61DCA436");
+}
+
+.container #item8
+{
+    background-image: url("https://scontent.fmnl3-2.fna.fbcdn.net/v/t1.15752-9/270821005_1281253965695955_6964927461937558789_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeH6yteBOYKhOinFaYaaY0J8vdvJq_VRRiW928mr9VFGJQH7D-9Gqd3soWn8OGuxTXyBdjBzNgQikintEVB6HUNv&_nc_ohc=J5tsqIw53zUAX9YVnhl&tn=AnUQFHfz6SaU0FB8&_nc_ht=scontent.fmnl3-2.fna&oh=03_AVJUUNg2nSOx06ZS-NP3LaV0keRD-FscFfba6XUNKxUZ3Q&oe=61FEBA0A");
+}
+
+</style>
+
+<div id="content">
+    <div class="container">
+        <div id="item1"></div>
+        <div id="item2"></div>
+        <div id="item3"></div>
+        <div id="item4"></div>
+        <div id="item5"></div>
+        <div id="item6"></div>
+        <div id="item7"></div>
+        <div id="item8"></div>
+      </div>
+</div>
+
+
+<div id="myModal" class="modal">
+  
+    <span class="close">&times;</span>
+   
+    <img class="modal-content" id="img01">
+   
+    <div id="caption"></div>
+</div>
+
+
+<iframe src="footer.html" style="width:100%;height:50px; border:0px;"></iframe>
+</div>
+
+<script src="magic-grid.min.js"></script>
+<script src="gallery.js"></script>
